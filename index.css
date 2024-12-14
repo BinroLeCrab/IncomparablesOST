@@ -40,6 +40,8 @@ body {
 
 .card__buttons {
     display: flex;
+    justify-content: stretch;
+    flex-direction: column;
     gap: 10px;
     margin-top: 16px;
 }
@@ -49,7 +51,6 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 50%;
     padding: 12px 8px;
     text-decoration: none;
     color: black;
@@ -67,6 +68,49 @@ body {
 .button__icon {
     width: 28px;
     height: 28px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    filter: drop-shadow(0 0 4px #01372E);
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+    mix-blend-mode: difference;
+}
+
+@media (min-width: 400px) {
+
+    .card__buttons {
+        flex-direction: row;
+    }
+
+    .button__item {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1150px) {
+    footer a {
+        color: #01372E;
+        filter: none;
+    }
 }
 
 /*
